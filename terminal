@@ -4,3 +4,4 @@ cd flow-site
 echo '{"name": "flow-site"}' > package.json
 npx create-next-app@latest . --typescript --tailwind --app --use-npm 
 npm run dev 
+npm install react-icons 

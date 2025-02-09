@@ -3,97 +3,156 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      {/* ヒーローセクション */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              動画管理を、もっとシンプルに
-            </h1>
-            <p className="text-xl mb-8">
-              WindowsとMac両対応。直感的な操作で動画ファイルを簡単管理
-            </p>
-            <div className="space-x-4">
-              <button className="bg-white text-blue-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                Windows版をダウンロード
-              </button>
-              <button className="bg-white text-blue-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                Mac版をダウンロード
-              </button>
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
+      <main className="flex-grow">
+        {/* ヒーローセクション */}
+        <section className="relative overflow-hidden py-32">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400"></div>
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+          <div className="relative container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">
+                Flow
+              </h1>
+              <p className="text-2xl mb-4 text-blue-100">
+                タイムラインのサムネイルで動画管理するデスクトップアプリ
+              </p>
+              <p className="text-lg mb-12 text-blue-100/90">
+                クロスプラットフォームに対応しており、無料で利用できます。
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="group bg-white px-8 py-4 rounded-2xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                  <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                    Windows版をダウンロード
+                  </span>
+                </button>
+                <button className="group bg-white px-8 py-4 rounded-2xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                  <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                    Mac版をダウンロード
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 機能紹介セクション */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">主な機能</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard
-              emoji="🎥"
-              title="簡単な動画管理"
-              description="ドラッグ＆ドロップで簡単に動画を整理できます"
-            />
-            <FeatureCard
-              emoji="🔍"
-              title="高速検索"
-              description="タグやタイトルで素早く動画を見つけられます"
-            />
-            <FeatureCard
-              emoji="🔄"
-              title="クロスプラットフォーム"
-              description="WindowsとMacの両方で利用可能です"
-            />
+        {/* アプリ概要セクション */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Flowは、動画ファイルをタイムラインのサムネイル表示で視覚的に管理できるデスクトップアプリケーションです。
+                タグ管理、お気に入り機能を備え、再生回数やファイルサイズなどでのソート機能で大量の動画ファイルを効率的に整理・管理することができます。
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 価格セクション */}
-      <section className="bg-gray-100 py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">価格プラン</h2>
-          <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-center mb-4">無料版</h3>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center">
-                <span className="text-green-500 mr-2">✓</span>
-                基本的な動画管理機能
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-500 mr-2">✓</span>
-                最大100件までの動画管理
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-500 mr-2">✓</span>
-                基本的な検索機能
-              </li>
-            </ul>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-              ダウンロードする
-            </button>
+        {/* 機能紹介セクション */}
+        <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              主な機能
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="p-8 rounded-2xl bg-white shadow-[0_0_50px_rgba(0,0,0,0.06)] hover:shadow-[0_0_50px_rgba(0,0,0,0.1)] transition-all duration-300">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                  表示・管理機能
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white flex items-center justify-center text-sm">✓</span>
+                    タイムライン形式でのサムネイル表示
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white flex items-center justify-center text-sm">✓</span>
+                    ファイル＆フォルダでの動画インポート
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white flex items-center justify-center text-sm">✓</span>
+                    タグによる動画管理
+                  </li>
+                </ul>
+              </div>
+              <div className="p-8 rounded-2xl bg-white shadow-[0_0_50px_rgba(0,0,0,0.06)] hover:shadow-[0_0_50px_rgba(0,0,0,0.1)] transition-all duration-300">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                  便利な機能
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white flex items-center justify-center text-sm">✓</span>
+                    お気に入り登録と再生回数トラッキング
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white flex items-center justify-center text-sm">✓</span>
+                    ファイル名による高速検索
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white flex items-center justify-center text-sm">✓</span>
+                    再生回数やファイルサイズでのソート
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* リリース情報セクション */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              リリース情報
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <div className="p-8 rounded-2xl bg-white shadow-[0_0_50px_rgba(0,0,0,0.06)]">
+                <div className="mb-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-semibold text-gray-800">バージョン 1.0.0</h3>
+                    <span className="px-4 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-600">
+                      2025年2月9日
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-6">初回リリース</p>
+                  <ul className="space-y-3 text-gray-600">
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-400"></span>
+                      タイムライン表示機能
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-400"></span>
+                      タグ管理システム
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-400"></span>
+                      Windows/Mac対応
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-6 border-t border-gray-100">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-4">動作環境</h4>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                      Windows 10/11 (64bit)
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                      macOS 12.0以降
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       {/* フッター */}
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-gray-900 text-gray-400 py-12 mt-auto">
         <div className="container mx-auto px-4 text-center">
-          <p>© 2024 動画管理アプリ. All rights reserved.</p>
+          <p>© 2025 Flow. All rights reserved.</p>
         </div>
       </footer>
-    </main>
-  )
-}
-
-// 機能カードコンポーネント
-function FeatureCard({ emoji, title, description }: { emoji: string; title: string; description: string }) {
-  return (
-    <div className="text-center p-6">
-      <div className="text-4xl mb-4">{emoji}</div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p>{description}</p>
     </div>
   )
 }

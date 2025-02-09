@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ビデオ管理アプリ - 簡単な動画整理を実現',
-  description: 'WindowsとMac対応の使いやすい動画管理アプリケーション。効率的な動画ファイルの整理・管理を実現します。',
+  title: 'Flow - シンプルな動画管理アプリ',
+  description: 'WindowsとMac対応の無料動画管理アプリケーション。直感的な操作で動画ファイルを簡単に整理・管理できます。',
 }
 
 export default function RootLayout({
