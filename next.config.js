@@ -5,6 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NODE_ENV === 'production' ? '/Flow-Site' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Flow-Site' : '',
 }
 
 module.exports = nextConfig 

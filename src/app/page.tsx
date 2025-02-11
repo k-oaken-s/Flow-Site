@@ -2,6 +2,11 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
+// basePath用のユーティリティ関数を追加
+const getBasePath = () => {
+  return process.env.NODE_ENV === 'production' ? '/Flow-Site' : '';
+};
+
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -29,7 +34,7 @@ export default function Home() {
             <div className="text-center max-w-4xl mx-auto">
               <div className="flex items-center justify-center gap-6 mb-8">
                 <Image
-                  src="/flow.png"
+                  src={`${getBasePath()}/flow.png`}
                   alt="Flow アプリアイコン"
                   width={96}
                   height={96}
@@ -95,7 +100,7 @@ export default function Home() {
               <div className="md:col-span-2">
                 <div className="rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.06)] hover:shadow-[0_0_50px_rgba(0,0,0,0.1)] transition-all duration-300">
                   <Image
-                    src="/images/preview1.png"
+                    src={`${getBasePath()}/images/preview1.png`}
                     alt="Flow - タイムライン表示"
                     width={1200}
                     height={675}
@@ -111,7 +116,7 @@ export default function Home() {
                   onClick={() => handleImageClick(i)}
                 >
                   <Image
-                    src={`/images/preview${i}.png`}
+                    src={`${getBasePath()}/images/preview${i}.png`}
                     alt={`Flow - プレビュー ${i}`}
                     width={600}
                     height={338}
@@ -137,7 +142,7 @@ export default function Home() {
                 ×
               </button>
               <Image
-                src={`/images/preview${selectedImage}.png`}
+                src={`${getBasePath()}/images/preview${selectedImage}.png`}
                 alt={`Flow - プレビュー ${selectedImage}`}
                 width={1200}
                 height={675}

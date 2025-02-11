@@ -1,0 +1,3 @@
+touch public/.nojekyll 
+npm install
+npm run build 
