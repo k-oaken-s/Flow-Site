@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Flow - シンプルな動画管理アプリ',
   description: 'WindowsとMac対応の無料動画管理アプリケーション。直感的な操作で動画ファイルを簡単に整理・管理できます。',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 }
 
 export default function RootLayout({
